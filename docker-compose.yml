@@ -1,0 +1,13 @@
+version: '3.5'
+services:
+  frontend:
+    build: .
+    restart: always
+    environment:
+      - VIRTUAL_HOST=holoclinic.io
+      - VIRTUAL_PORT=3000
+    networks:
+      mypupio: {}
+networks:
+  mypupio:
+    name: mypupio
